@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  .page-header
+    h3(align='center') Olvidaste tu Contraseña?
+  .col-sm-8.col-sm-offset-2
+    form(method='POST')
+      input(type='hidden', name='_csrf', value=_csrf)
+      .form-group
+        p Introduce tu Direccion de Correo Para mandarte las Intrucciones de Recuperacion.
+        label.control-label(for='email') Correo
+        input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus, required)
+      .form-group
+        button.btn.btn-default(type='submit')
+          i.fa.fa-key
+          | Reinicar Contraseña

@@ -1,0 +1,42 @@
+extends ../layout
+
+block content
+  .page-header
+    h3(align='center') Login
+  form.form-horizontal(method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
+    .form-group
+      label.col-sm-3.control-label(for='email') Correo
+      .col-sm-7
+        input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus, required)
+    .form-group
+      label.col-sm-3.control-label(for='password') Contraseña
+      .col-sm-7
+        input.form-control(type='password', name='password', id='password', placeholder='Password', required)
+    .form-group
+      label.col-sm-3.control-label(for='recatpcha') Captcha
+      .col-sm-7
+        != captcha
+    .form-group
+      .col-sm-offset-3.col-sm-7
+        button.col-sm-3.btn.btn-default(type='submit')
+          i.fa.fa-user
+          | Login
+        a.btn.btn-link.forgot(href='/forgot') Olvidaste tu Contraseña?
+    .form-group
+      .col-sm-offset-3.col-sm-7
+        hr
+    .form-group
+      .col-sm-offset-3.col-sm-7
+        a.btn.btn-block.btn-facebook.btn-social(href='/auth/facebook')
+          i.fa.fa-facebook
+          | Inicia con Facebbok
+        a.btn.btn-block.btn-twitter.btn-social(href='/auth/twitter')
+          i.fa.fa-twitter
+          | Inicia con Twitter
+        a.btn.btn-block.btn-google.btn-social(href='/auth/google')
+          i.fa.fa-google-plus
+          | Inicia con Google
+        a.btn.btn-block.btn-github.btn-social(href='/auth/github')
+          i.fa.fa-github
+          | Inicia con GitHub

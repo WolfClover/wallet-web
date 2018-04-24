@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .page-header
+    h1 CloverCoin Wallet Web
+  p.lead Wallet Oficial de Clover Coin en la web
+  hr
+  .row
+    .col-sm-6
+      h2 Rapido y Seguro
+      p Esta billetera en linea es alimentado con NodeJS/MongoDB que se ejecuta en conjunto con un Trebol de la Moneda Completo Nodo, permitiendo el acceso a la velocidad y el poder de el Trebol Moneda de blockchain.
+      p
+        if user
+        else
+          a.btn.btn-default(href='/signup', role='button') Registrate »
+    .col-sm-6
+      h2 Que es Clover Coin?
+      p WolfcloverCoin mas que una criptomoneda es una plataforma digital que se especializa en el mundo de la era financiera, divisas y criptomonedas, donde contaremos con CloverCoin, una moneda Segura que se podra obtener de manera facil y enviar sin Fees, nuestra familia espera captar el interes de una base de miembros leales y habituales con su amplia variedad de productos, servicios, confiabilidad y seguridad. La empresa planea ocupar una posicion importante a nivel nacional e internacional, gracias a nuestro equipo calificado y la experiencia en la industria. La gran familia Wolfclover tiene como objetivo ofrecer una herramienta completa que permite crecer economicamente en el mundo de las criptomonedas, porque ademas de satisfacer las exigencias de los clientes va en pro de su desarrollo financiero, proporcionando un nivel de ingresos de medio a alto.
+      p
+        a.btn.btn-default(href='https://t.me/Wolf_clover/', target='_blank', role='button') Grupo Oficial »

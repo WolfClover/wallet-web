@@ -1,0 +1,39 @@
+extends ../layout
+
+block content
+  script.
+    function show() {
+      var x = document.getElementById('box');
+      if (x.style.display === 'none') {
+          x.style.display = 'block';
+      } else {
+          x.style.display = 'none';
+      }
+    }
+  .container
+    if user
+    .page-header
+      h3(align='center')  CloverCoin Direccion
+      p(align='center') 
+        | Main WCC Address
+        ul.list-group
+          li.list-group-item
+            .row
+              .col-md-6.mt(align='center')
+                strong #{addy}
+              .col-md-6(align='center')
+                a.btn.btn-sm.btn-default(href='#', onclick='show()') Ver Key Privado
+        #box(align='center')
+          em Escriba o importe su clave privada en CloverCoin-QT o CloverCoind para acceder a la dirección principal de su billetera
+          br
+          strong #{privkey}
+      p(align='center')
+        h3(align='center') Lista de Direccion
+        p(align='center') NOTA: ¡Solo puede obtener la clave privada para su dirección principal!
+      ul.list-group
+      each address in addresses
+        li.list-group-item
+          | #{address}
+      br
+      p(align='center')
+        a.btn.btn-default(href='/wallet', role='button') Regresar a la Wallet      
